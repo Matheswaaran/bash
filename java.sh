@@ -1,12 +1,18 @@
-tar_file=$1
-java_ver=$2
-java_dir=/usr/local/java
+echo $1 
+echo $2
 
 # Checking the arguments
-if [[ $tar_file == "" && $java_ver == "" ]]; then
-	echo "Error  :Please give two arguments.."
+if [[ $1 == "" ]] && [[ $2 == "" ]]
+then
+	echo "Error  : Please give two arguments.."
 	echo "Format : ./java.sh <tar_file> <java_version>"
 else
+
+	# Variable Initialization
+	tar_file=$1
+	java_ver=$2
+	java_dir=/usr/local/java
+
 	#Java Installation
 	file /sbin/init
 	sudo mkdir $java_dir
