@@ -1,0 +1,571 @@
+
+Practice Test #1 Questions - answers at end
+
+                             Important Instructions
+
+     1. Read all the instructions and both sides of all pages.
+     2. Manage your time when answering questions on this test.
+        Answer the questions you know, first.
+
+________________________________________________________________________________
+
+                         Multiple Choice - 60 Questions
+This is a practice test containing many practice questions.  The real test will
+contain some questions similar to these.  There are probably many more questions
+in this practice test than there will be time for in the real test.  The real
+test will have approximately one question per minute.
+
+The real test may have some questions unlike anything given here.  Knowing the
+concepts behind the questions is necessary; memorizing these specific answers
+won't help.
+
+The answers to this test are in the Answer Key on the last page(s).
+
+1.  In an empty directory, how many arguments are passed to the rm command in
+    this bash command line?   touch a a1 a2 ba ca ; rm a*
+    a. 4
+    b. 3
+    c. 2
+    d. none
+    e. 1
+
+2.  If directory /a contains these seven two-character file names: aa, ab, ac,
+    ad, a?, a*, a., then which shell command below will remove only the single
+    name a* from the directory (and no others)?
+    a. rm /a/a*
+    b. rm /a/*
+    c. rm "/a/a*"
+    d. rm /a*
+    e. rm /a/a?
+
+3.  If file /a/b contains ninety-nine lines, each of which is the two-digit line
+    number of the line in the file (01 through 99), what is the output of this
+    command: sort /a/b /a/b | tail -4 | head -1
+    a. 01 01
+    b. 98
+    c. 04 04
+    d. 96 96
+    e. 96
+
+4.  If I am in my home directory named /home/me and x is an empty sub-directory,
+    what is true after this command line:
+       touch ./x/fil ; mv x/./fil x/../../me/./y
+    a. the directory x now contains only a file named y
+    b. the command fails because the path x/../../me does not exist
+    c. the directory x is still empty
+    d. the command fails because the path x/./fil does not exist
+    e. there is a second copy of the file fil in the file named y
+
+5.  What is the output of this shell command line in an empty directory?
+       touch .a .b .c ; echo .??*
+    a. an error message from echo saying .??* does not exist
+    b. . .. .a .b .c
+    c. no output
+    d. .??*
+    e. .a .b .c
+
+6.  If I am in my home directory named /home/ian and mt is an empty sub-
+    directory, what is true after this command line:
+       touch ../ian/cat ; cp ./mt/../cat ./mt/../dog
+    a. the directory mt is still empty
+    b. the directory mt now has a file named dog in it
+    c. the directory mt now contains two files
+    d. there is a second copy of the file named who in the file dog
+    e. the command fails because the path ./mt/../cat does not exist
+
+7.  Which of these statements is true?
+    a. If /x is an empty directory, sort /x/* produces an error message.
+    b. Only double quotes are strong enough to stop shell glob (wildcard)
+       patterns from expanding.
+    c. If /y is an empty directory, echo /y/* produces an error message.
+    d. Only single quotes are strong enough to stop shell glob (wildcard)
+       patterns from expanding.
+    e. Only backslashes are strong enough to stop shell glob (wildcard) patterns
+       from expanding.
+
+8.  Which of the following VI/VIM key sequences will move the entire line on
+    which the cursor resides to after the line that follows it (i.e. it would
+    move line 5 to be line 6 and line 6 would become line 5)?
+    a. ddp
+    b. DDP
+    c. DDp
+    d. ddP
+    e. :dp
+
+9.  Which command pipeline outputs the count of the number of pathnames
+    (including all subdirectories) that lie under the /etc directory?
+    a. man /etc ; wc
+    b. ls /etc | wc
+    c. ls /etc ; wc
+    d. dir /etc | count
+    e. find /etc | wc
+
+10. If I am in my home directory named /home/myhome and sub is an empty sub-
+    directory, what is true after this command line:
+       touch ./fil ; mv sub/../fil ../myhome/cat
+    a. the command fails because the path ../myhome/cat does not exist
+    b. the directory sub now contains only a file named cat
+    c. the directory sub/.. now has a file named cat in it
+    d. there is a second copy of the file fil in the file named cat
+    e. the command fails because the path sub/../fil does not exist
+
+11. When doing an ls -a, the output pathname that is a double dot (..) signifies
+    what?
+    a. A file or directory with double links.
+    b. The parent directory.
+    c. The root directory.
+    d. A hidden file.
+    e. The current directory.
+
+12. If file foo contains nine lines, each of which is the one-digit line number
+    of the line in the file (1 through 9), what is the output on your screen of
+    this command:  cat foo foo | sort -r | head -5 | tail -1
+    a. 9
+    b. 8
+    c. 6
+    d. 7
+    e. 5
+
+13. What would you see if you typed this command:   cat /users
+    a. The contents of your subdirectory named users
+    b. The contents of the file users located in your home directory
+    c. The contents of the file users located in the parent directory
+    d. The contents of the file users located in the root directory
+    e. The contents of your directory named users
+
+14. How can you ask the bash (Linux) shell to complete commands or file names
+    for you?
+    a. You can type the first part of the command or file name and press the TAB
+       key.
+    b. Type [CONTROL]-[D] and the shell will present a menu of commands.
+    c. You can type the first part of the command or file name and press the ALT
+       key.
+    d. Type [ALT]-[F2] the shell will present a menu of commands.
+    e. Type [CONTROL]-[ALT]-[DEL] and the shell will present a menu of commands.
+
+15. Which Unix command sequence deletes a directory and everything inside it?
+    a. erase dir
+    b. erase -r dir
+    c. rm -r dir
+    d. deltree -all dir
+    e. rmdir -all dir
+
+16. What is the output of this shell command line in an empty directory?
+       touch a .a bc .bc def ; echo [ab]*
+    a. [ab]*
+    b. an error message from echo saying [ab]* does not exist
+    c. a bc
+    d. no output
+    e. a .a bc .bc
+
+17. What is the output of this shell command line in an empty directory?
+       echo *
+    a. no output
+    b. *
+    c. ..
+    d. .
+    e. .   ..
+
+18. What is the output of this successful command sequence?
+       cd /home/foo ; touch dir ; mkdir bar ; pwd
+    a. /home/foo/dir
+    b. /home/foo/bar
+    c. /home/foo
+    d. /bar
+    e. /home/foo/dir/bar
+
+19. What command shows all the lines in file /etc/group that contain the string
+    idallen?
+    a. grep /etc/group idallen
+    b. grep idallen ; /etc/group
+    c. cat /etc/group ; grep idallen
+    d. cat /etc/group | wc idallen
+    e. grep idallen /etc/group
+
+20. Which command line sorts the list of users currently logged in to the
+    machine and displays just the one line containing the userid that sorts
+    first?
+    a. sort who | head -1
+    b. sort | who | head -1
+    c. head -1 who | sort
+    d. who | sort | head -1
+    e. head -1 sort who
+
+21. Which of the following shell command lines displays all the names in the
+    current directory that are exactly three digits long (and no others)?
+    a. echo ???
+    b. echo [3][3][3]
+    c. echo [?][?][?]
+    d. echo [0-9][0-9][0-9]
+    e. echo [1-3][1-3][1-3]
+
+22. How many lines are output on your screen after this command:
+       touch foo ; diff foo foo
+    a. 3
+    b. 1
+    c. 2
+    d. 0
+    e. 4
+
+23. If my current directory is /etc, which of these pathnames is equivalent to
+    the file name /etc/passwd?
+    a. ./etc/passwd
+    b. ./passwd
+    c. ../passwd
+    d. ../etc/passwd/.
+    e. /passwd
+
+24. Which of these statements is true?
+    a. Unix commands can be entered in upper-case or lower-case letters; they
+       are equivalent.
+    b. You can only login to Unix once per userid; you cannot be logged in to
+       the same machine twice.
+    c. Unix commands must be entered in lower-case letters.
+    d. To erase an entire line of typing, type [CONTROL]-[E].
+    e. To indicate End-of-File (no more input), type [CONTROL]-[E].
+
+25. In the output of the command ls -a, the one-character name . signifies what?
+    a. A current file.
+    b. A name that is hidden.
+    c. The current directory.
+    d. A name with an unprintable character.
+    e. The parent directory.
+
+26. If I am in my home directory named /home/alleni and empty is an empty sub-
+    directory, what is true after this command line:
+       touch ./cat ; mv empty/../cat ../alleni/dog
+    a. the command fails because the path ../alleni/dog does not exist
+    b. the command fails because the path empty/../cat does not exist
+    c. the directory empty now contains only a file named dog
+    d. the directory empty/.. now has a file named dog in it
+    e. there is a second copy of the file cat in the file named dog
+
+27. Which command line below does not show any lines from inside the file dog?
+    a. ls dog
+    b. less dog
+    c. tail dog
+    d. more dog
+    e. head dog
+
+28. What appears on your screen after this bash shell command line?
+       echo hi | wc
+    a. 1 2 1
+    b. no output
+    c. 1 1 2
+    d. 1 1 3
+    e. 2 1 1
+
+29. If foo is a sub-directory that contains only the file single, what happens
+    after this command:   mv ./foo/single foo/../double
+    a. the directory foo is now empty
+    b. the command fails because the name double does not exist
+    c. there is a second copy of the file single in the file named double
+    d. the command fails because the name foo/../double does not exist
+    e. the directory foo now contains only a file named double
+
+30. Which command line lists all possible utilities available for compiling
+    programs?
+    a. grep /etc/* compile
+    b. apropos compile
+    c. grep compile /etc/*
+    d. man * | grep compile
+    e. man compile
+
+31. What is the output of this shell command line in an empty directory?
+       touch .12 .345 .6789 ; echo .??*
+    a. no output
+    b. .??*
+    c. .12 .345 .6789
+    d. an error message from echo saying .??* does not exist
+    e. . .. .12 .345 .6789
+
+32. Which command line displays the contents of the Unix passwd file one page at
+    a time?
+    a. cat less | /etc/passwd
+    b. /etc/passwd cat less
+    c. less /etc/passwd
+    d. /etc/passwd | less
+    e. cat /etc/passwd less
+
+33. In an empty directory, how many arguments are passed to the cat command in
+    this bash command line?   touch a1 a2 ba ca ; cat a*
+    a. 3
+    b. none
+    c. 1
+    d. 2
+    e. 4
+
+34. If cow is a sub-directory that contains only the file dog, what happens
+    after this command:   mv cow/dog cow/././cat
+    a. the command fails because the name cat does not exist
+    b. the directory cow now contains only a file named cat
+    c. there is a second copy of the file dog in the file named cat
+    d. the directory cow is now empty
+    e. the command fails because the name cow/././cat does not exist
+
+35. If /etc/passwd is a file name, which of the following pathnames always leads
+    to the same file?
+    a. ././etc/passwd
+    b. /./../etc/./passwd
+    c. /etc/../../passwd
+    d. /etc/passwd/../..
+    e. /etc/passwd/./.
+
+36. If my current working directory is /home, and my home directory is /home/me,
+    which of the of the following commands copies the Unix password file into my
+    home directory under the name foo?
+    a. cp ../home/me/../etc/passwd ./me/./foo
+    b. cp me/../../etc/passwd me/foo
+    c. cp ./me/../etc/passwd ../home/me/foo
+    d. cp ../../etc/passwd /me/foo
+    e. cp ../etc/passwd ../me/foo
+
+37. Which command sequence below outputs only lines 10-15 of the 16-line file
+    named hex?
+    a. tail -16 hex | head -10
+    b. head -16 hex | tail -5 hex
+    c. head -15 hex | tail -6
+    d. head -10 hex | tail -15 hex
+    e. tail -10 hex | head -16 hex
+
+38. If file foo contains nine lines, each of which is the number of the line in
+    the file, what is the output of this command:
+       cat foo foo | sort | tail -4 | head -1
+    a. 1
+    b. no output
+    c. 4
+    d. 8
+    e. 6
+
+39. If directory foo contains only these four three-character file names: .x1,
+    .x2, .z3, .z., then what is the output of the following bash shell command
+    line: echo foo/???
+    a. no output
+    b. foo/.z.
+    c. foo/.x1 foo/.x2 foo/.z3
+    d. foo/.x1 foo/.x2 foo/.z3 foo/.z.
+    e. foo/???
+
+40. What is the output of this shell command line in an empty directory?
+       ls *
+    a. .
+    b. .   ..
+    c. *
+    d. no output
+    e. an error message from ls saying * does not exist
+
+41. If my current directory is /bin, which of these pathnames is equivalent to
+    the file name /bin/ls?
+    a. /root/bin/ls
+    b. ./bin/ls
+    c. ../../bin/ls
+    d. ls/.
+    e. ../bin/ls/.
+
+42. Which of the following shell command lines displays only the names in the
+    current directory that are exactly three alphabetic letters long?
+    a. echo ***
+    b. echo [a-zA-Z][a-zA-Z][a-zA-Z]
+    c. echo ???
+    d. echo [0-3][0-3][0-3]
+    e. echo [?][?][?]
+
+43. If my current directory is /home, which of these pathnames is equivalent to
+    the pathname /home/a/b/c?
+    a. /a/b/c
+    b. ../home/b/c
+    c. ./home/a/b/c
+    d. ../a/b/c
+    e. ./a/b/c
+
+44. Which command below is the best way to find a line containing a question
+    mark (?) in the file /etc/passwd?
+    a. grep '?' /etc/passwd
+    b. grep /etc/passwd ./?
+    c. grep ? ; /etc/passwd
+    d. grep ? /etc/passwd
+    e. grep ./? /etc/passwd
+
+45. Which of the following is true, given this long directory listing from ls:
+       drwxr-x--x 256 ian user 512 May 30 12:35 dir
+    a. The number 256 is the octal permissions of this directory.
+    b. The number 512 is the count of links (names) this directory has.
+    c. The number 256 is the inode number of this directory.
+    d. The number 256 is the size of this directory.
+    e. The number 512 is the size of this directory.
+
+46. Which of the following pathnames always leads to the same file named:
+    /etc/passwd?
+    a. /etc/passwd/.
+    b. ../etc/passwd
+    c. ./etc/passwd
+    d. /etc/./etc/../passwd
+    e. /etc/../etc/passwd
+
+47. What is the output of this shell command line in an empty directory?
+       touch .a .b .c ; echo [.]*
+    a. [.]*
+    b. . .. .a .b .c
+    c. .a .b .c
+    d. an error message from echo saying [.]* does not exist
+    e. no output
+
+48. If you type the command  sleep 60
+    which of the following key sequences will interrupt it and take you
+    immediately back to the command prompt?
+    a. [CTRL-C]
+    b. [CTRL-L]
+    c. [CTRL-U]
+    d. [CTRL-R]
+    e. [CTRL-D]
+
+49. Which of these statements is true?
+    a. The file command creates a new, empty file in the current directory
+    b. To interrupt a Unix process from the keyboard, type [CONTROL]-[D].
+    c. Command apropos is an exact synonym for command man.
+    d. To indicate End-of-File (no more input) to a program, type [CONTROL]-[D].
+    e. To erase an entire line of typing, type [ALT]-[DELETE].
+
+50. What command can you use to remove a directory that isn't empty?
+    a. rmdir -r dir
+    b. rm -r dir
+    c. deldir -r dir
+    d. mv -r dir
+    e. del -r dir
+
+51. What is the output of this shell command line in an empty directory?
+       touch .a .b .c ; echo .*
+    a. . .. .a .b .c
+    b. .*
+    c. no output
+    d. .a .b .c
+    e. an error message from echo saying .* does not exist
+
+52. What is the output of this successful command sequence?
+       cd /home/dir ; mkdir one ; mkdir two ; pwd
+    a. /two
+    b. /home/dir/two
+    c. /home/dir/one/two
+    d. /home/dir
+    e. /home/dir/one
+
+53. In the output of the command ls -a, a dot that begins a name signifies what?
+    a. A name that is hidden.
+    b. A name with an unprintable character.
+    c. The parent directory.
+    d. The current directory.
+    e. A current file.
+
+54. How many arguments and options are there to the command:  ls -ls /cat
+    a. Two command line arguments, one of which contains two bundled options.
+    b. A three-letter file name and a /cat switch option argument.
+    c. Two options, no arguments.
+    d. Two arguments, one of which is a single option and the other is a
+       pathname.
+    e. Two arguments, no options.
+
+55. How do I change "foo" to "bar" on lines 25 to 30 in the vim editor?
+    a. :25,30s/foo/bar/g
+    b. $ head -30 foo | tail -25 | vim s/foo/bar/
+    c. $ head -25 foo | tail -30 | echo s/foo/bar/ | vim
+    d. :25,30w foo/bar
+    e. :25,30r foo/bar
+
+56. Which command shows the name of the current computer:
+    a. hostname
+    b. w
+    c. who
+    d. comname
+    e. users
+
+57. Which command line lists all possible utilities available for sorting files?
+    a. man -k sort
+    b. man | grep sort
+    c. grep /etc/passwd sort
+    d. grep sort /etc/passwd
+    e. man sort
+
+58. If you type the command  sort
+    which of the following key sequences will send an EOF and take you
+    immediately back to the command prompt?
+    a. [CTRL-R]
+    b. [CTRL-U]
+    c. [CTRL-D]
+    d. [CTRL-C]
+    e. [CTRL-L]
+
+59. What can you do to get back (redo) the last command you typed to the bash
+    (Linux) shell?
+    a. Type [CONTROL]-[ALT]-[UP]
+    b. Type [CONTROL]-[BACKSPACE]
+    c. Use the "UpArrow" key.
+    d. Use the "PageUp" key.
+    e. Type [ALT]-[F2]
+
+60. Which command pipeline outputs the count of the number of manual page titles
+    that contain the keyword "sort"?
+    a. wc man sort
+    b. wc -k sort
+    c. man sort | wc
+    d. man -k sort | wc
+    e. man sort ; wc
+
+      Answer Key
+
+   1. b                                      57. a
+   2. c                                      58. c
+   3. b                                      59. c
+   4. c                                      60. d
+    5. d
+    6. a                                   Count of a:  15  25%
+    7. a                                   Count of b:  11  18%
+    8. a                                   Count of c:  14  23%
+   9. e                                    Count of d:  13  22%
+  10. c                                    Count of e:  7  12%
+  11. b
+  12. d                                    With 5 choices: 60
+   13. d
+   14. a                                   Macro .cmd split with indent: 17
+   15. c
+   16. c
+  17. b
+  18. c
+  19. e
+  20. d
+   21. d
+   22. d
+   23. b
+   24. c
+  25. c
+  26. d
+  27. a
+  28. d
+   29. a
+   30. b
+   31. c
+   32. c
+  33. d
+  34. b
+  35. b
+  36. b
+   37. c
+   38. d
+   39. e
+   40. e
+  41. c
+  42. b
+  43. e
+  44. a
+   45. e
+   46. e
+   47. a
+   48. a
+  49. d
+  50. b
+  51. a
+  52. d
+   53. a
+   54. a
+   55. a
+   56. a
+

@@ -1,0 +1,8 @@
+===============comparing in.stock.txt with combined.txt====================
+ 
+No match found for "INA726003W" in "combined.txt"
+ 
+===============comparing combined.txt with in.stock.txt====================
+ 
+No match found for "97RR1BS" in "in.stock.txt"
+ 
